@@ -190,27 +190,62 @@ tr:nth-child(even) {
 .step.active {
   opacity: 1;
 }
+h5 {
+  font-size:40px; /* 40px/16=2.5em */
+}
+
 
 /* Mark the steps that are finished and valid: */
 .step.finish {
   background-color: #ffffff;
 }
+#boxes {margin-left:25%;
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .hi {
+    width:100%;
+    display:table;
+}
+.hi div {
+    margin-left:80%;
+    padding:0;
+    display:table-cell;
+}
+.hi div:last-of-type{
+    text-align:left;
+}
+    
+#column1 {
+        background-color: #b1acac;
+      }
+#column2 {
+        background-color: #a7a0a0;
+        width: 50%;
+      }
+     
+h3 {
+        color: #000000;
+        text-align: center;
+      }
 </style>
 <body>
 
 <form id="TRACFONE" action="/action_page.php">
   <h1>
   <!-- One "tab" for each step in the form: -->
-  <div class="tab"><center>WELCOME<br><br>
+  <div class="tab"><center><h1>WELCOME</h1><br><br>
 
     Recommendation Prediction Analysis<br>
 
     Project Name : Financial Forecasting Analysis</h1>
 </center>
   </div>
+  
   <div class="tab">
-   <center><H1>Use case – Tracfone Sample data<br><br>
-        Sample data used for a telecom company Tracfone</center></H1>
+   <center><h5>Use case – Tracfone Sample data</h5>
+        <h1>Sample data used for a telecom company Tracfone</center></h1>
         <center><table>
             
             <tr>
@@ -225,7 +260,42 @@ tr:nth-child(even) {
               
             </tr>
           </table></center>
-  </div>  
+  </div>
+  <main id="boxes">
+  <div class="tab">
+    <div class="hi">
+    <div id="column1">
+      <center><h2 style="font-size: 1cm;"> Preferences</h2><br></center>
+      <p style="font-size: 0.6cm;"><ul> <li>Year </li>
+        <li> Month</li>
+    <li>Carrier</li>
+    <li>Plan </li>
+    <li>Technology</li>
+    <li>Device Type</li>
+    <li>Usage %</li></ul></p>
+
+
+    </div>
+    <div id="column2">
+      <center><h2  style="font-size: 1cm;"> Algorithms used </h2></center>
+      <H3>XGBoost Regression</H3>
+      <ul><li>Highly Flexible</li>
+     <li> parallel processing </li>
+     <li> faster than Gradient Boosting</li>
+     <li>Supports regularization</li></ul>
+      <H3>Random Forest</H3>
+      <ul><li>Reduces overfitting in decision trees</li>
+        <li>Flexible to both classification and regression problems</li>
+        <li>categorical and continuous values</li>
+          <li>It automates missing values present in the data</li>
+      <H3>Linear Regression</H3>
+      <li> Fits linearly separable datasets almost perfectly</li>
+        <li> Overfitting can be reduced by regularization</li></ul>
+
+    </div>
+  </div>
+  </div>
+</main>  
   <div class="tab">    
         <div class="banner">
             <center>
@@ -250,31 +320,31 @@ tr:nth-child(even) {
                                     <option value="0">---</option>
                                     <option value="1">01</option>
                                     <option value="2">02</option>        
-                                    <option value="1">03</option>
-                                    <option value="2">04</option>  
-                                    <option value="1">05</option>
-                                    <option value="2">06</option>                                                                              
-                                    <option value="1">07</option>
-                                    <option value="2">08</option>  
-                                    <option value="1">09</option>
-                                    <option value="2">10</option>  
-                                    <option value="1">11</option>
-                                    <option value="2">12</option>  
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>  
+                                    <option value="5">05</option>
+                                    <option value="6">06</option>                                                                              
+                                    <option value="7">07</option>
+                                    <option value="8">08</option>  
+                                    <option value="9">09</option>
+                                    <option value="10">10</option>  
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>  
                                     </select></label>
                                     
                        <label for="carrier">CARRIER<span style="color: white">i</span><span style="color: black">:</span><span style="color: white">i</span><select id="carrier" name="carrier">
                             <option value="0">-All-</option>
-                            <option value="1">T-Mobile</option>
-                            <option value="2">ATT</option>
-                            <option value="3">Verizon</option>                        
+                            <option value="T">T-Mobile</option>
+                            <option value="A">ATT</option>
+                            <option value="V">Verizon</option>                        
                             </select></label><span style="color: white">SPACE </span><b style="color: white">DK</b><b style="color: white"></b>
                             
                             
                         <label for="carrier"><b style="color: white">Defgsgsdgsgdgsdgrcvxcvcxvxzcvzxcvcgzxcvzdsvzsdvdszv</b>ALGORITHMS<span style="color: white">i</span><span style="color: black">:</span><span style="color: white">i</span><select id="carrier" name="carrier">
                                 <option value="0">---</option>
-                                <option value="1">XGBoost</option>
-                                <option value="2">RandomForest</option>
-                                <option value="3">KNN</option>                                                       
+                                <option value="X">XGBoost</option>
+                                <option value="R">RandomForest</option>
+                                <option value="K">Linear Regression</option>                                                       
                                 </select></label></h3><center><br>
                     </div>
           
@@ -283,10 +353,10 @@ tr:nth-child(even) {
                 <p class="a"><b>PLAN</b><span style="color: white">I</span>: <span ><span style="color: white">Iffff</span><b>TECHNOLOGY</b><span style="color: white">I</span>:</span> <span><b>DEVICE</b><span style="color: white">I</span><b>TYPE</b><span style="color: white">I</span>: <sapn><b style="font-size:20">USAGE</b><span style="font-size:20">:</span><span style="color: white">I</span></sapn><span style="font-size:23" id="demo"></span><span style="font-size:23">%</span></p>
                 <label id="plan" name="plan"></label><select multiple id="plan" name="plan" >
                                 <option value="0">-All-</option>
-                                <option value="1">$20 Unlimited Talk</option>
-                                <option value="2">$25 Unlimited Talk</option>
-                                <option value="3">$30 Unlimited Texts</option>
-                                <option value="4">$60 Unlimited Interntional</option>
+                                <option value="20">$20 Unlimited Talk</option>
+                                <option value="25">$25 Unlimited Talk</option>
+                                <option value="30">$30 Unlimited Texts</option>
+                                <option value="60">$60 Unlimited Interntional</option>
                                 
                                 
                                 </select> 
@@ -295,20 +365,20 @@ tr:nth-child(even) {
                                 
                                 <label for="tech"><b style="color: white">tech</b><span style="color: white">ijkkuj</span><span style="color: white">i</span></label><select multiple  id="tech" name="tech">
                                     <option value="0">-All-</option>                                    
-                                    <option value="2">2G</option>
-                                    <option value="3">3G</option>
-                                    <option value="4">4G</option>
-                                    <option value="4">5G</option>
-                                    <option value="4">5G LITE</option>
+                                    <option value="2g">2G</option>
+                                    <option value="3g">3G</option>
+                                    <option value="4g">4G</option>
+                                    <option value="5g">5G</option>
+                                    <option value="5l">5G LITE</option>
                                 </select>
                                 
                                 
                                 <label for="device"><b style="color: white">Devicet</b><span style="color: white">i</span><b style="color: white">DEVICETY</b><span style="color: white">i</span></label><select  multiple  id="device" name="device">
                                     <option value="0">-All-</option>
-                                    <option value="1">Basic Phone</option>
-                                    <option value="2">Android Phone</option>
-                                    <option value="3">Tablet</option>
-                                    <option value="4">Apple Phone</option ></select>
+                                    <option value="B">Basic Phone</option>
+                                    <option value="Android">Android Phone</option>
+                                    <option value="Tablet">Tablet</option>
+                                    <option value="Apple">Apple Phone</option ></select>
                                 
                                                            
                            
@@ -403,10 +473,7 @@ tr:nth-child(even) {
                     </div>
                         <hr>
                                 
-                                  
-                                <center>                            
-                                <input type="submit" class="submit" value="DOWNLOAD" >
-                                </center> 
+                                 
                        
              </div>    
         </div>
@@ -449,7 +516,7 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    //document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("nextBtn").innerHTML = "Submit";
   } else {
     document.getElementById("nextBtn").innerHTML = "Next"&raquo;;
   }
